@@ -8,140 +8,34 @@ function Contact() {
     message: ""
   });
 
-  const handleChange = async  (e) => {
+  const handleChange = (e) => {
     setForm({
       ...form,
       [e.target.name]: e.target.value
     });
   };
 
-  
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const res = await axios.post(
+        "https://fullstackportfolio11-p283.vercel.app/contact",
+        form
+      );
+
+      alert(res.data.message);
+
+      setForm({
+        name: "",
+        email: "",
+        message: ""
+      });
 
     } catch (error) {
       alert("Error sending message");
     }
   };
-      const handleSubmit = async (e) => {
-  e.preventDefault();
-
-  try {
-    const res = await axios.post(
-      "https://fullstackportfolio11-p283.vercel.app/contact",
-      form
-    );
-
-    alert(res.data.message);
-
-    setForm({
-      name: "",
-      email: "",
-      message: ""
-    });
-
-  } catch (error) {
-    alert("Error sending message");
-  }
-};const handleSubmit = async (e) => {
-  e.preventDefault();
-
-  try {
-    const res = await axios.post(
-      "https://fullstackportfolio11-p283.vercel.app/contact",
-      form
-    );
-
-    alert(res.data.message);
-
-    setForm({
-      name: "",
-      email: "",
-      message: ""
-    });
-
-  } catch (error) {
-    alert("Error sending message");
-  }
-};const handleSubmit = async (e) => {
-  e.preventDefault();
-
-  try {
-    const res = await axios.post(
-      "https://fullstackportfolio11-p283.vercel.app/contact",
-      form
-    );
-
-    alert(res.data.message);
-
-    setForm({
-      name: "",
-      email: "",
-      message: ""
-    });
-
-  } catch (error) {
-    alert("Error sending message");
-  }
-};const handleSubmit = async (e) => {
-  e.preventDefault();
-
-  try {
-    const res = await axios.post(
-      "https://fullstackportfolio11-p283.vercel.app/contact",
-      form
-    );
-
-    alert(res.data.message);
-
-    setForm({
-      name: "",
-      email: "",
-      message: ""
-    });
-
-  } catch (error) {
-    alert("Error sending message");
-  }
-};const handleSubmit = async (e) => {
-  e.preventDefault();
-
-  try {
-    const res = await axios.post(
-      "https://fullstackportfolio11-p283.vercel.app/contact",
-      form
-    );
-
-    alert(res.data.message);
-
-    setForm({
-      name: "",
-      email: "",
-      message: ""
-    });
-
-  } catch (error) {
-    alert("Error sending message");
-  }
-};const handleSubmit = async (e) => {
-  e.preventDefault();
-
-  try {
-    const res = await axios.post(
-      "https://fullstackportfolio11-p283.vercel.app/contact",
-      form
-    );
-
-    alert(res.data.message);
-
-    setForm({
-      name: "",
-      email: "",
-      message: ""
-    });
-
-  } catch (error) {
-    alert("Error sending message");
-  }
-};});
 
   return (
     <section className="contact">
