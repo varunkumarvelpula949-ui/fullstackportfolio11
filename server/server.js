@@ -6,19 +6,10 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// Home Route
-app.get("/", (req, res) => {
-  res.send("🎉 Portfolio Backend is Running!");
-});
-
-// Contact Route
 app.post("/contact", (req, res) => {
   const { name, email, message } = req.body;
 
-  console.log("New Contact Form Submission");
-  console.log("Name:", name);
-  console.log("Email:", email);
-  console.log("Message:", message);
+  console.log(name, email, message);
 
   res.json({
     success: true,
@@ -26,6 +17,4 @@ app.post("/contact", (req, res) => {
   });
 });
 
-app.listen(5000, () => {
-  console.log("Server running on port 5000");
-});
+module.exports = app;
