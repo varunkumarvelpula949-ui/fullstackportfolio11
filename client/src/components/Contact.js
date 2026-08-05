@@ -20,7 +20,7 @@ function Contact() {
 
     try {
       const res = await axios.post(
-        "http://axios.post("https:axios.post("https://fullstackportfolio11-p283.vercel.app/...")
+        "http://fullstackportfolio11-p283.vercel.app/contact")
         form
       );
 
