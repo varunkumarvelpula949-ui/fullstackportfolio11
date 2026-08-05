@@ -31,7 +31,6 @@ function Contact() {
         email: "",
         message: ""
       });
-
     } catch (error) {
       alert("Error sending message");
     }
@@ -69,9 +68,7 @@ function Contact() {
           required
         />
 
-        <button type="submit">
-          Send Message
-        </button>
+        <button type="submit">Send Message</button>
       </form>
     </section>
   );
